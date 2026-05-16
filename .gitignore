@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Flutter
+apps/client/.dart_tool/
+apps/client/.flutter-plugins
+apps/client/.flutter-plugins-dependencies
+apps/client/build/
+apps/client/coverage/
+
+# Rust
+apps/server/target/
+
+# Editors
+.idea/
+.vscode/

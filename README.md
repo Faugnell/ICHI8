@@ -175,11 +175,47 @@ cd apps/server
 cargo run
 ```
 
+The backend exposes:
+
+```http
+GET /health
+```
+
 ### Run Flutter App
 
 ```sh
 cd apps/client
 flutter run
+```
+
+If the Flutter platform folders have not been generated yet, run this once:
+
+```sh
+cd apps/client
+flutter create . --platforms=web,ios,android
+```
+
+### Run With Docker
+
+```sh
+cp .env.example .env
+docker compose up --build
+```
+
+The API will be available on `http://localhost:3000`.
+
+### Deploy Web To GitHub Pages
+
+The Flutter web app is deployed through GitHub Actions to:
+
+```txt
+https://faugnell.github.io/ICHI8/
+```
+
+The workflow builds the app with:
+
+```sh
+flutter build web --release --base-href /ICHI8/
 ```
 
 ## Inspirations
