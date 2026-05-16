@@ -75,7 +75,7 @@ The game is designed around:
 
 ### Infrastructure
 
-- PostgreSQL
+- MySQL or PostgreSQL
 - Redis
 - Docker
 - Nginx
@@ -166,7 +166,7 @@ The main goals are to:
 - Flutter SDK
 - Rust stable
 - Docker
-- PostgreSQL
+- MySQL or PostgreSQL
 
 ### Run Backend
 
@@ -204,19 +204,20 @@ docker compose up --build
 
 The API will be available on `http://localhost:3000`.
 
-### Deploy Web To GitHub Pages
+### Production Target
 
-The Flutter web app is deployed through GitHub Actions to:
+The planned production domain is:
 
 ```txt
-https://faugnell.github.io/ICHI8/
+https://ichi8.gg
 ```
 
-The workflow builds the app with:
+The intended production setup is:
 
-```sh
-flutter build web --release --base-href /ICHI8/
-```
+- Flutter Web served as static files
+- Rust API served behind a reverse proxy
+- Database accessed only by the backend
+- HTTPS terminated by Nginx or the hosting provider
 
 ## Inspirations
 

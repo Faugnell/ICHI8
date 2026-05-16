@@ -3,4 +3,4 @@
 This section documents deployment and hosting notes for ICHI8.
 
 - `ovh-database.md` - PostgreSQL configuration details needed for OVH
-- GitHub Pages deployment is configured in `.github/workflows/deploy-web.yml`
+- `ichi8-gg.md` - planned production setup for `ichi8.gg`
